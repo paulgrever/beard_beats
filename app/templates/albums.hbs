@@ -1,5 +1,11 @@
 <div class="albums template">
   <p>This is <em>albums.hbs</em>.</p>
-  {{#link-to 'artist.index' class="button"}}&larr; Back{{/link-to}}
+
+  <h3>Albums</h3>
+
+  <ul class="albums">
+    {{#each model as |album|}}
+    <li>{{album.title}} ({{album.releaseDate}})</li>
+    {{/each}}
+  </ul>
 </div>
-{{outlet}}
