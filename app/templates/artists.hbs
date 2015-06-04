@@ -2,7 +2,8 @@
   <p>This is <em>artists.hbs</em>.</p>
   <ul class="artist">
     {{#each model as |artist|}}
-      <li>{{artist.name}}</li>
+      {{!-- 1)link 2)this is text 3) this is object --}}
+      <li>{{#link-to 'artist' artist }} {{artist.name}}{{/link-to}}</li>
     {{/each}}
   </ul>
   {{outlet}}
